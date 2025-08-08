@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Dinkzs</string>
+    <string name="title_activity_main">Dinkzs</string>
+    <string name="package_name">com.lovable.dinkzs</string>
+    <string name="custom_url_scheme">com.lovable.dinkzs</string>
+</resources>

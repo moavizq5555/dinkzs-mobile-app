@@ -1,0 +1,47 @@
+{
+  "name": "dinkzs",
+  "version": "1.0.0",
+  "description": "Capacitor Web View Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build your web assets here'",
+    "cap:add": "cap add",
+    "cap:copy": "cap copy",
+    "cap:sync": "cap sync",
+    "cap:open": "cap open",
+    "cap:run": "cap run",
+    "cap:build": "cap build",
+    "serve": "serve www -p 3000",
+    "ios": "cap run ios",
+    "android": "cap run android",
+    "web": "serve www -p 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "capacitor",
+    "webview",
+    "mobile",
+    "cross-platform"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/app": "^7.0.1",
+    "@capacitor/camera": "^7.0.1",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/device": "^7.0.1",
+    "@capacitor/dialog": "^7.0.1",
+    "@capacitor/haptics": "^7.0.1",
+    "@capacitor/ios": "^7.4.2",
+    "@capacitor/network": "^7.0.1",
+    "@capacitor/splash-screen": "^7.0.1",
+    "@capacitor/status-bar": "^7.0.1"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7.4.2",
+    "serve": "^14.2.1"
+  }
+}
