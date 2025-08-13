@@ -1,6 +1,7 @@
 // Dinkzs Mobile App - Capacitor Integration
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Dinkzs Mobile App loaded");
+
   initializeApp();
 });
 
@@ -25,6 +26,9 @@ function initializeApp() {
 }
 
 function initializeCapacitorFeatures() {
+  // Initialize Edge-to-Edge support for Android 15+
+  initializeEdgeToEdge();
+
   // Handle app state changes
   if (Capacitor.Plugins.App) {
     Capacitor.Plugins.App.addListener("appStateChange", ({ isActive }) => {
@@ -60,6 +64,26 @@ function initializeCapacitorFeatures() {
 
   // Initialize location services
   initializeLocationServices();
+}
+
+async function initializeEdgeToEdge() {
+  try {
+    const { Device } = await import("@capacitor/device");
+    const { EdgeToEdge } = await import(
+      "@capawesome/capacitor-android-edge-to-edge-support"
+    );
+
+    const info = await Device.getInfo();
+    if (Capacitor.getPlatform() === "android" && Number(info.osVersion) >= 15) {
+      await EdgeToEdge.enable(); // Enable only on Android 15+
+      console.log("Edge-to-Edge enabled for Android 15+");
+    } else {
+      await EdgeToEdge.disable(); // Prevents layout issues on older Android versions
+      console.log("Edge-to-Edge disabled for older Android versions");
+    }
+  } catch (error) {
+    console.error("Error initializing Edge-to-Edge:", error);
+  }
 }
 
 function initializeLocationServices() {

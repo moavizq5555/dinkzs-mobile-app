@@ -22,7 +22,7 @@
     },
     "StatusBar": {
       "style": "light",
-      "backgroundColor": "#ffffff",
+      "backgroundColor": "#00000000",
       "overlaysWebView": false
     },
     "Camera": {
@@ -34,6 +34,13 @@
     "App": {
       "url": "https://playdinkzs.com/",
       "webContentsDebuggingEnabled": false
+    },
+    "plugins": {
+      "Keyboard": {
+        "resize": "body",
+        "style": "DARK",
+        "resizeOnFullScreen": false
+      }
     }
   },
   "ios": {

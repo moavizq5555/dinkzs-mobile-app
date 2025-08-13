@@ -35,9 +35,11 @@
     "@capacitor/dialog": "^7.0.1",
     "@capacitor/haptics": "^7.0.1",
     "@capacitor/ios": "^7.4.2",
+    "@capacitor/keyboard": "^7.0.2",
     "@capacitor/network": "^7.0.1",
     "@capacitor/splash-screen": "^7.0.1",
-    "@capacitor/status-bar": "^7.0.1"
+    "@capacitor/status-bar": "^7.0.1",
+    "@capawesome/capacitor-android-edge-to-edge-support": "^7.2.2"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
