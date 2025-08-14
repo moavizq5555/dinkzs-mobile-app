@@ -273,8 +273,9 @@ function loadWebsite() {
   const webview = document.getElementById("webview");
   const loading = document.getElementById("loading");
   const errorMessage = document.getElementById("errorMessage");
+  const gifImg = document.getElementById("loadingGif");
 
-  // Show loading screen
+  // Show loading screen with GIF
   if (loading) {
     loading.style.display = "flex";
   }
@@ -283,14 +284,43 @@ function loadWebsite() {
   }
 
   // Set up status bar for loading
-  if (typeof Capacitor !== "undefined" && Capacitor.Plugins.StatusBar) {
-    Capacitor.Plugins.StatusBar.setStyle({ style: "light" });
-    Capacitor.Plugins.StatusBar.setBackgroundColor({ color: "#667eea" });
-  }
+  // if (typeof Capacitor !== "undefined" && Capacitor.Plugins.StatusBar) {
+  //   Capacitor.Plugins.StatusBar.setStyle({ style: "light" });
+  //   Capacitor.Plugins.StatusBar.setBackgroundColor({ color: "#667eea" });
+  // }
 
-  // Load the website
-  if (webview) {
-    webview.src = "https://playdinkzs.com/";
+  // Show GIF for a specific duration before loading webview
+  const gifDisplayDuration = 3500; // 3 seconds - adjust if needed
+  console.log(
+    `Showing GIF for ${gifDisplayDuration}ms before loading webview...`
+  );
+
+  const startDelayThenLoad = () => {
+    setTimeout(() => {
+      console.log("GIF display time completed, now loading webview...");
+      if (webview) {
+        webview.src = "https://playdinkzs.com/";
+      }
+    }, gifDisplayDuration);
+  };
+
+  if (gifImg) {
+    if (gifImg.complete) {
+      startDelayThenLoad();
+    } else {
+      gifImg.addEventListener("load", startDelayThenLoad, { once: true });
+      gifImg.addEventListener(
+        "error",
+        () => {
+          console.warn("GIF failed to load; proceeding after delay.");
+          startDelayThenLoad();
+        },
+        { once: true }
+      );
+    }
+  } else {
+    // Fallback if GIF element missing
+    startDelayThenLoad();
   }
 }
 

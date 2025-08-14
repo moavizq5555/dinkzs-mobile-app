@@ -4,7 +4,6 @@
   "webDir": "www",
   "server": {
     "androidScheme": "https",
-    "url": "https://playdinkzs.com/",
     "cleartext": true
   },
   "plugins": {
@@ -32,7 +31,6 @@
       "permissions": ["geolocation"]
     },
     "App": {
-      "url": "https://playdinkzs.com/",
       "webContentsDebuggingEnabled": false
     },
     "plugins": {
@@ -52,7 +50,6 @@
       "allowsBackForwardNavigationGestures": true
     },
     "server": {
-      "url": "https://playdinkzs.com/",
       "cleartext": true
     }
   },
@@ -62,7 +59,6 @@
     "captureInput": true,
     "webContentsDebuggingEnabled": false,
     "server": {
-      "url": "https://playdinkzs.com/",
       "cleartext": true
     },
     "webView": {
@@ -74,7 +70,6 @@
   },
   "web": {
     "server": {
-      "url": "https://playdinkzs.com/",
       "cleartext": true
     }
   }

@@ -37,7 +37,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,58 +47,55 @@
         flex-direction: column;
       }
 
-      .dinkzs-logo {
-        width: 120px;
-        height: 120px;
-        background: white;
-        border-radius: 20px;
+      .gif-container {
+        width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        animation: pulse 2s ease-in-out infinite;
+        margin-bottom: 0;
+        position: relative;
+        animation: fadeIn 1s ease-in;
       }
 
-      .dinkzs-logo svg {
-        width: 80px;
-        height: 80px;
+      .gif-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
-      @keyframes pulse {
-        0%,
+      /* @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
         100% {
+          opacity: 1;
           transform: scale(1);
         }
-        50% {
-          transform: scale(1.05);
-        }
-      }
-
-      .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        border-top: 3px solid white;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
+      } */
 
       .loading-text {
         font-size: 1.1rem;
         font-weight: 500;
         text-align: center;
-        margin-top: 10px;
+        margin-top: 0;
+        color: white;
+        animation: pulse 2s ease-in-out infinite;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
       }
 
       #webview {
@@ -137,61 +134,13 @@
   </head>
   <body>
     <div id="loading">
-      <div class="dinkzs-logo">
-        <svg
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <!-- Pickleball Paddle -->
-          <ellipse
-            cx="50"
-            cy="35"
-            rx="25"
-            ry="8"
-            fill="#667eea"
-            stroke="#5a6fd8"
-            stroke-width="2"
-          />
-          <rect
-            x="45"
-            y="35"
-            width="10"
-            height="40"
-            fill="#667eea"
-            stroke="#5a6fd8"
-            stroke-width="2"
-          />
-          <rect x="47" y="75" width="6" height="8" fill="#5a6fd8" />
-
-          <!-- Pickleball -->
-          <circle
-            cx="50"
-            cy="25"
-            r="8"
-            fill="white"
-            stroke="#5a6fd8"
-            stroke-width="1"
-          />
-          <circle cx="47" cy="22" r="1" fill="#5a6fd8" />
-          <circle cx="53" cy="22" r="1" fill="#5a6fd8" />
-          <circle cx="50" cy="28" r="1" fill="#5a6fd8" />
-
-          <!-- Dinkzs Text -->
-          <text
-            x="50"
-            y="95"
-            text-anchor="middle"
-            font-family="Arial, sans-serif"
-            font-size="12"
-            font-weight="bold"
-            fill="#667eea"
-          >
-            dinkzs
-          </text>
-        </svg>
+      <div class="gif-container">
+        <img
+          id="loadingGif"
+          src="assets/gifs/loading.gif"
+          alt="Loading Dinkzs..."
+        />
       </div>
-      <div class="loading-spinner"></div>
       <div class="loading-text">Loading Dinkzs...</div>
     </div>
 
@@ -203,7 +152,6 @@
 
     <iframe
       id="webview"
-      src="https://playdinkzs.com/"
       allow="camera; microphone; geolocation; fullscreen; display-capture; clipboard-read; clipboard-write"
       sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation allow-top-navigation"
       onload="onWebViewLoad()"
