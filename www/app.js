@@ -284,13 +284,13 @@ function loadWebsite() {
   }
 
   // Set up status bar for loading
-  // if (typeof Capacitor !== "undefined" && Capacitor.Plugins.StatusBar) {
-  //   Capacitor.Plugins.StatusBar.setStyle({ style: "light" });
-  //   Capacitor.Plugins.StatusBar.setBackgroundColor({ color: "#667eea" });
-  // }
+  if (typeof Capacitor !== "undefined" && Capacitor.Plugins.StatusBar) {
+    Capacitor.Plugins.StatusBar.setStyle({ style: "light" });
+    Capacitor.Plugins.StatusBar.setBackgroundColor({ color: "#ffffff" });
+  }
 
   // Show GIF for a specific duration before loading webview
-  const gifDisplayDuration = 3500; // 3 seconds - adjust if needed
+  const gifDisplayDuration = 1000; // 3 seconds - adjust if needed
   console.log(
     `Showing GIF for ${gifDisplayDuration}ms before loading webview...`
   );
