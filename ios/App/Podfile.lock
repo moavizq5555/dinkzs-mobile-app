@@ -20,6 +20,7 @@ PODS:
     - Capacitor
   - CapacitorStatusBar (7.0.1):
     - Capacitor
+  - lottie-ios (4.5.2)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
@@ -33,6 +34,11 @@ DEPENDENCIES:
   - "CapacitorNetwork (from `../../node_modules/@capacitor/network`)"
   - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
   - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
+  - lottie-ios
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -70,7 +76,8 @@ SPEC CHECKSUMS:
   CapacitorNetwork: 15cb4385f0913a8ceb5e9a4d7af1ec554bdb8de8
   CapacitorSplashScreen: 1d67815a422a9b61539c94f283c08ed56667c0fc
   CapacitorStatusBar: 6e7af040d8fc4dd655999819625cae9c2d74c36f
+  lottie-ios: 96784afc26ea031d3e2b6cae342a4b8915072489
 
-PODFILE CHECKSUM: 22829fec13f07872db4efa7ca79ae23f82358812
+PODFILE CHECKSUM: 6da91b89f7a31408ab1480d70a2e92b20f7d598d
 
 COCOAPODS: 1.16.2

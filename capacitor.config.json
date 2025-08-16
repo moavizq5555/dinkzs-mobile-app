@@ -3,25 +3,18 @@
   "appName": "dinkzs",
   "webDir": "www",
   "server": {
+    "url": "https://playdinkzs.com",
     "androidScheme": "https",
     "cleartext": true
   },
   "plugins": {
     "SplashScreen": {
-      "launchShowDuration": 0,
-      "backgroundColor": "#ffffff",
-      "androidSplashResourceName": "splash",
-      "androidScaleType": "CENTER_CROP",
-      "showSpinner": false,
-      "androidSpinnerStyle": "large",
-      "iosSpinnerStyle": "small",
-      "spinnerColor": "#ffffff",
-      "splashFullScreen": true,
-      "splashImmersive": true
+      "launchAutoHide": true,
+      "launchShowDuration": 0
     },
     "StatusBar": {
       "style": "light",
-      "backgroundColor": "#00000000",
+      "backgroundColor": "#ffffff",
       "overlaysWebView": false
     },
     "Camera": {
