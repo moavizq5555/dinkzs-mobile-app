@@ -16,11 +16,15 @@ PODS:
     - Capacitor
   - CapacitorNetwork (7.0.1):
     - Capacitor
+  - CapacitorSecureStoragePlugin (0.11.0):
+    - Capacitor
+    - SwiftKeychainWrapper
   - CapacitorSplashScreen (7.0.1):
     - Capacitor
   - CapacitorStatusBar (7.0.1):
     - Capacitor
   - lottie-ios (4.5.2)
+  - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
   - "Capacitor (from `../../node_modules/@capacitor/ios`)"
@@ -32,6 +36,7 @@ DEPENDENCIES:
   - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
   - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
   - "CapacitorNetwork (from `../../node_modules/@capacitor/network`)"
+  - CapacitorSecureStoragePlugin (from `../../node_modules/capacitor-secure-storage-plugin`)
   - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
   - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
   - lottie-ios
@@ -39,6 +44,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - SwiftKeychainWrapper
 
 EXTERNAL SOURCES:
   Capacitor:
@@ -59,6 +65,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/keyboard"
   CapacitorNetwork:
     :path: "../../node_modules/@capacitor/network"
+  CapacitorSecureStoragePlugin:
+    :path: "../../node_modules/capacitor-secure-storage-plugin"
   CapacitorSplashScreen:
     :path: "../../node_modules/@capacitor/splash-screen"
   CapacitorStatusBar:
@@ -74,10 +82,12 @@ SPEC CHECKSUMS:
   CapacitorHaptics: 1f1e17041f435d8ead9ff2a34edd592c6aa6a8d6
   CapacitorKeyboard: a86aa9e4741b6444a802df26440a92ae041b34a6
   CapacitorNetwork: 15cb4385f0913a8ceb5e9a4d7af1ec554bdb8de8
+  CapacitorSecureStoragePlugin: 450d402026ee3bcc018fa206504d9c0572fee78d
   CapacitorSplashScreen: 1d67815a422a9b61539c94f283c08ed56667c0fc
   CapacitorStatusBar: 6e7af040d8fc4dd655999819625cae9c2d74c36f
   lottie-ios: 96784afc26ea031d3e2b6cae342a4b8915072489
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: 6da91b89f7a31408ab1480d70a2e92b20f7d598d
+PODFILE CHECKSUM: 5ebc3f16af25c8b70cbb53c3c5f5e464f5958970
 
 COCOAPODS: 1.16.2

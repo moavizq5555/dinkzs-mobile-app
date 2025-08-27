@@ -21,6 +21,7 @@ def capacitor_pods
   pod 'CapacitorNetwork', :path => '../../node_modules/@capacitor/network'
   pod 'CapacitorSplashScreen', :path => '../../node_modules/@capacitor/splash-screen'
   pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
+  pod 'CapacitorSecureStoragePlugin', :path => '../../node_modules/capacitor-secure-storage-plugin'
 end
 
 target 'App' do
